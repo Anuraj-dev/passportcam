@@ -12,12 +12,27 @@ android {
         minSdk = 26
         targetSdk = 36
         versionCode = 1
-        versionName = "0.1.0"
+        versionName = "1.0.0"
+    }
+
+    // Release signing comes from the environment (CI secrets or a local shell); without it the
+    // release APK is simply left unsigned. The keystore never lives in the repo.
+    val keystorePath = System.getenv("PASSPORTCAM_KEYSTORE")
+    signingConfigs {
+        if (keystorePath != null) {
+            create("release") {
+                storeFile = file(keystorePath)
+                storePassword = System.getenv("PASSPORTCAM_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("PASSPORTCAM_KEY_ALIAS") ?: "passportcam"
+                keyPassword = System.getenv("PASSPORTCAM_KEYSTORE_PASSWORD")
+            }
+        }
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
+            if (keystorePath != null) signingConfig = signingConfigs.getByName("release")
         }
     }
     buildFeatures { compose = true }

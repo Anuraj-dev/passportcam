@@ -195,13 +195,13 @@ private fun PhotoCard(
             val share = @Composable { m: Modifier ->
                 BigButton(
                     stringResource(R.string.share), rememberVectorPainter(Icons.Filled.Share), onShare,
-                    modifier = m, height = 64.dp,
+                    modifier = m, height = 64.dp, compact = compact,
                 )
             }
             val delete = @Composable { m: Modifier ->
                 BigButton(
                     stringResource(R.string.delete), rememberVectorPainter(Icons.Filled.Delete), onDelete,
-                    modifier = m, primary = false, height = 64.dp, contentColor = Danger,
+                    modifier = m, primary = false, height = 64.dp, contentColor = Danger, compact = compact,
                 )
             }
             if (compact) {

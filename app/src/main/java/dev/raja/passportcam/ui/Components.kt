@@ -62,16 +62,17 @@ fun BigButton(
     primary: Boolean = true,
     height: Dp = 80.dp,
     contentColor: Color? = null,
+    compact: Boolean = false,
 ) {
     val source = remember { MutableInteractionSource() }
     val m = modifier.fillMaxWidth().heightIn(min = height).pressScale(source)
-    val pad = PaddingValues(horizontal = 20.dp, vertical = 12.dp)
+    val pad = PaddingValues(horizontal = if (compact) 8.dp else 20.dp, vertical = 12.dp)
     val content: @Composable () -> Unit = {
         if (icon != null) {
-            Icon(icon, contentDescription = null, modifier = Modifier.size(32.dp))
-            Spacer(Modifier.width(14.dp))
+            Icon(icon, contentDescription = null, modifier = Modifier.size(if (compact) 24.dp else 32.dp))
+            Spacer(Modifier.width(if (compact) 8.dp else 14.dp))
         }
-        Text(text, style = MaterialTheme.typography.labelLarge, textAlign = TextAlign.Center)
+        Text(text, style = MaterialTheme.typography.labelLarge, textAlign = TextAlign.Center, maxLines = 1, softWrap = false)
     }
     if (primary) {
         Button(

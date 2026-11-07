@@ -43,7 +43,10 @@ object PassportCropper {
         val rect = computeCropRect(face.bounds, source.width, source.height)
         // createBitmap returns [source] itself when the region is the whole bitmap, so guard before recycling.
         val region = Bitmap.createBitmap(source, rect.left, rect.top, rect.width(), rect.height())
-        val scaled = Bitmap.createScaledBitmap(region, sidePx, sidePx, true)
+        var scaled = Bitmap.createScaledBitmap(region, sidePx, sidePx, true)
+        // Both calls return their input when nothing changes (whole-image crop already at sidePx). The caller owns and
+        // recycles the result, so it must never be [source]: hand back an independent copy in that case.
+        if (scaled === source) scaled = source.copy(source.config ?: Bitmap.Config.ARGB_8888, false)
         if (region !== source && region !== scaled) region.recycle()
         PLog.i(
             AREA,

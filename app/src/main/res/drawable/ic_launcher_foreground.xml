@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Passport-photo card with head-and-shoulders silhouette. 108dp canvas; art kept inside the 66dp safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#1E5AA8"
+        android:pathData="M35,28h38a5,5 0,0 1,5 5v42a5,5 0,0 1,-5 5h-38a5,5 0,0 1,-5 -5v-42a5,5 0,0 1,5 -5z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,47m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M37,80L37,74C37,65 45,60 54,60C63,60 71,65 71,74L71,80Z" />
+</vector>

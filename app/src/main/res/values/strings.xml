@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Passport Photo</string>
+
+    <!-- Home -->
+    <string name="home_helper">Take a photo or choose one.\nWe make it passport size.</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_photo">Choose Photo</string>
+
+    <!-- Camera -->
+    <string name="back">Back</string>
+    <string name="shutter">Take photo</string>
+    <string name="flip_camera">Switch camera</string>
+    <string name="camera_hint">Face in the middle</string>
+    <string name="capture_failed">Could not take the photo. Please try again.</string>
+    <string name="camera_ask_title">Use the camera</string>
+    <string name="camera_ask_body">To take your photo, the app needs the camera. Tap below, then tap Allow.</string>
+    <string name="camera_allow">Allow Camera</string>
+    <string name="camera_blocked_title">Camera is turned off</string>
+    <string name="camera_blocked_body">Open Settings, tap Permissions, then turn on Camera. Then come back here.</string>
+    <string name="open_settings">Open Settings</string>
+    <string name="no_camera_title">Camera not available</string>
+    <string name="no_camera_body">Go back and tap Choose Photo instead.</string>
+
+    <!-- Processing -->
+    <string name="processing_title">Making your passport photos…</string>
+    <string name="processing_body">This takes a few seconds.</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Results -->
+    <string name="results_title">Your photos are ready</string>
+    <string name="results_saved">Saved in your gallery: Pictures/PassportPhotos</string>
+    <plurals name="results_skipped">
+        <item quantity="one">%d face was too small and was skipped</item>
+        <item quantity="other">%d faces were too small and were skipped</item>
+    </plurals>
+    <string name="results_empty">No photos left.</string>
+    <string name="size_kb">%d KB</string>
+    <string name="share">Share</string>
+    <string name="share_chooser">Share photo</string>
+    <string name="delete">Delete</string>
+    <string name="delete_title">Delete this photo?</string>
+    <string name="delete_body">It will be removed from your gallery.</string>
+    <string name="keep">Keep</string>
+    <string name="delete_failed">Could not delete this photo. Please try again.</string>
+    <string name="share_failed">No app found to share with.</string>
+    <string name="done">Done</string>
+    <string name="take_another">Take another</string>
+    <string name="photo_description">Passport photo %d</string>
+
+    <!-- Errors -->
+    <string name="noface_title">No face found</string>
+    <string name="noface_body">We could not find a face. Face the camera straight, make sure the face is clearly visible, then try again.</string>
+    <string name="noface_small_body">The face is too small. Move closer so the face fills more of the picture, then try again.</string>
+    <string name="failed_title">Sorry, something went wrong</string>
+    <string name="failed_body">Please try again. If it keeps happening, try a different photo.</string>
+    <string name="save_failed_body">We could not save the photos. Please try again.</string>
+    <string name="try_again">Try again</string>
+    <string name="back_to_start">Back to start</string>
+</resources>

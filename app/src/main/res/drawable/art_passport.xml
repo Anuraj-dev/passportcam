@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Home-screen illustration: the launcher art cropped to the card. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="52dp"
+    android:viewportWidth="48"
+    android:viewportHeight="52">
+    <path
+        android:fillColor="#1E5AA8"
+        android:pathData="M5,0h38a5,5 0,0 1,5 5v42a5,5 0,0 1,-5 5h-38a5,5 0,0 1,-5 -5v-42a5,5 0,0 1,5 -5z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,19m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M7,52L7,46C7,37 15,32 24,32C33,32 41,37 41,46L41,52Z" />
+</vector>
